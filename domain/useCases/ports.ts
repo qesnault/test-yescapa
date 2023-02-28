@@ -1,11 +1,16 @@
 import { VehicleInterface } from '~/domain/entites/vehicle.interface';
 
-interface VehicleStorageService {
+interface VehicleSetStorageService {
     setVehicleList(vehicleList: VehicleInterface[]): void;
 }
 
 export interface VehicleApiService {
-    getVehicles(): Promise<VehicleInterface[]>;
+    fetchVehicleList(): Promise<VehicleInterface[]>;
 }
 
-export interface FetchService extends VehicleApiService, VehicleStorageService {}
+export interface VehicleFilterStorageService {
+
+    filterVehicleList(filter: string): VehicleInterface[];
+}
+
+export interface FetchService extends VehicleApiService, VehicleSetStorageService {}

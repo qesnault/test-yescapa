@@ -3,9 +3,7 @@ import { useVehiclesStore } from '~/stores/vehicles';
 import { FetchService } from '~/domain/useCases/ports';
 
 export class VehiclesApi implements FetchService {
-  vehiclesApiService: Promise<VehicleInterface[]>;
-  constructor (_vehiclesApiService: Promise<VehicleInterface[]>) {
-    this.vehiclesApiService = _vehiclesApiService;
+  constructor (private vehiclesApiService: Promise<VehicleInterface[]>) {
   }
 
   setVehicleList (vehicleList: VehicleInterface[]): void {
@@ -13,7 +11,7 @@ export class VehiclesApi implements FetchService {
     vehiclesStore.setVehicleList(vehicleList);
   }
 
-  getVehicles (): Promise<VehicleInterface[]> {
+  fetchVehicleList (): Promise<VehicleInterface[]> {
     return this.vehiclesApiService;
   }
 }

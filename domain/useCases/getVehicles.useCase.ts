@@ -9,7 +9,7 @@ export class GetVehiclesUseCase {
   constructor (private VehicleRepository: FetchService) {}
 
   execute () {
-    this.VehicleRepository.getVehicles()
+    this.VehicleRepository.fetchVehicleList()
       .then((vehicleList) => {
         this.VehicleRepository.setVehicleList(vehicleList);
       });

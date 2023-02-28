@@ -1,7 +1,7 @@
 import { describe, expect, it, beforeEach } from 'vitest';
 import { createPinia, setActivePinia } from 'pinia';
 import { GetVehiclesUseCase } from '~/domain/useCases/getVehicles.useCase';
-import { VehiclesApi } from '~/data/repositories/vehiclesApi';
+import { VehiclesApi } from '~/data/adapters/vehiclesApi';
 import { VehicleInterface } from '~/domain/entites/vehicle.interface';
 import { useVehiclesStore } from '~/stores/vehicles';
 
