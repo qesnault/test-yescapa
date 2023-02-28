@@ -11,5 +11,10 @@ export const useVehiclesStore = defineStore('vehicles', {
     setVehicleList (vehicleList: VehicleInterface[]) {
       this.vehicleList = vehicleList;
     }
+  },
+  getters: {
+    getVehicleFromId: (state) => (id: number) => {
+      return state.vehicleList.find((vehicle) => vehicle.id === id);
+    }
   }
 });

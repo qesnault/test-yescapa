@@ -2,8 +2,15 @@
   "FILTER": "Filtrer",
   "NO_RESULT": "Aucun résultat",
   "PRICE": "{n}€/j",
+  "PRICE_FROM": "À partir de {n}€/j",
+  "REVIEWS": "Avis",
   "SEAT": "{n} place | {n} places",
   "SLEEP": "{n} couchage | {n} couchages",
   "SEARCH": "Rechercher :",
+  "UNKNOWN_ID": "ID inconnu",
+  "VEHICLE_SPECIFICATIONS": {
+    "_vehicle_seats": "{n} place avec ceinture | {n} places avec ceinture",
+    "_vehicle_beds": "{n} place couchage | {n} places couchage"
+  },
   "YESCAPA_CHALLENGE": "Yescapa Challenge"
 }
