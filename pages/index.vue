@@ -5,8 +5,8 @@
       class="w-full lg:w-1/6"
     />
     <div
-        v-if="filteredList.length === 0"
-        class="p-4 h-fit w-full bg-gray-200"
+      v-if="filteredList.length === 0"
+      class="p-4 h-fit w-full bg-gray-200"
     >
       {{ $t('NO_RESULT') }}
     </div>
@@ -15,17 +15,17 @@
       class="w-full lg:w-5/6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
     >
       <nuxt-link
-          v-for="vehicle in filteredList"
-          :key="vehicle.id"
-          :to="`/vehicles/${vehicle.id}`"
+        v-for="vehicle in filteredList"
+        :key="vehicle.id"
+        :to="`/vehicles/${vehicle.id}`"
       >
         <CardItem>
           <template #picture>
             <img
-                :src="vehicle.pictures[0].url"
-                :alt="vehicle.title"
-                class="w-full h-48 object-cover"
-                @error="onErrorImage"
+              :src="vehicle.pictures[0].url"
+              :alt="vehicle.title"
+              class="w-full h-48 object-cover"
+              @error="onErrorImage"
             >
           </template>
           <template #default>
@@ -46,8 +46,8 @@
                 <p>
                   ★ {{ vehicle.review_average }}
                   <span class="text-gray-500">
-                  ({{ vehicle.review_count }})
-                </span>
+                    ({{ vehicle.review_count }})
+                  </span>
                 </p>
               </div>
             </div>
@@ -62,12 +62,12 @@
 // Store
 import { storeToRefs } from 'pinia';
 import { useVehiclesStore } from '~/stores/vehicles';
-const vehiclesStore = useVehiclesStore();
-const { vehicleList } = storeToRefs(vehiclesStore);
 
 // Filters
 import { FilterVehiclesUseCase } from '~/domain/useCases/filterVehicles.useCase';
 import { FilterVehiclesAdapter } from '~/data/adapters/vehiclesFilters';
+const vehiclesStore = useVehiclesStore();
+const { vehicleList } = storeToRefs(vehiclesStore);
 
 const filters = reactive({
   searchInput: ''

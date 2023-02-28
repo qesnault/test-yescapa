@@ -13,8 +13,8 @@ export const useVehiclesStore = defineStore('vehicles', {
     }
   },
   getters: {
-    getVehicleFromId: (state) => (id: number) => {
-      return state.vehicleList.find((vehicle) => vehicle.id === id);
+    getVehicleFromId: state => (id: number) => {
+      return state.vehicleList.find(vehicle => vehicle.id === id);
     }
   }
 });

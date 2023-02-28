@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Yescapa challenge',
+      title: 'Yescapa challenge'
     }
   },
   modules: [
