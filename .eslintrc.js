@@ -1,11 +1,20 @@
 module.exports = {
-  "extends": [
-    "plugin:nuxt/recommended",
-    "@nuxtjs/eslint-config-typescript"
+  env: {
+    browser: true,
+    es2021: true,
+    node: true
+  },
+  extends: [
+    'plugin:nuxt/recommended',
+    'plugin:vue/vue3-recommended',
+    '@nuxtjs/eslint-config-typescript'
   ],
-  "rules": {
-    "@typescript-eslint/no-unused-vars": [
-      "off"
-    ]
+  parserOptions: {
+    ecmaVersion: 'latest',
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module'
+  },
+  rules: {
+    semi: [2, 'always']
   }
 };

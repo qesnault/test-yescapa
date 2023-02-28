@@ -6,7 +6,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "vitest": "vitest"
+    "vitest": "vitest",
+    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore ."
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.2.2",
@@ -16,6 +17,7 @@
     "@pinia/testing": "^0.0.15",
     "@vue/test-utils": "^2.3.0",
     "eslint": "^8.35.0",
+    "eslint-plugin-nuxt": "^4.0.0",
     "jsdom": "^21.1.0",
     "nuxt": "^3.2.2",
     "vitest": "^0.29.1"

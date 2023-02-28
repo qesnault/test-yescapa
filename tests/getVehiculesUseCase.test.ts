@@ -1,15 +1,14 @@
-import { GetVehiclesUseCase } from "~/domain/useCases/getVehicles.useCase";
-import { VehiclesApi } from "~/data/repositories/vehiclesApi";
-import { VehicleInterface } from "~/domain/entites/vehicle.interface";
-import { useVehiclesStore } from "~/stores/vehicles";
-
 import { describe, expect, it, beforeEach } from 'vitest';
-import {createPinia, setActivePinia} from "pinia";
+import { createPinia, setActivePinia } from 'pinia';
+import { GetVehiclesUseCase } from '~/domain/useCases/getVehicles.useCase';
+import { VehiclesApi } from '~/data/repositories/vehiclesApi';
+import { VehicleInterface } from '~/domain/entites/vehicle.interface';
+import { useVehiclesStore } from '~/stores/vehicles';
 
 describe('GetVehiclesUseCase', () => {
   beforeEach(() => {
-    setActivePinia(createPinia())
-  })
+    setActivePinia(createPinia());
+  });
 
   it('should get vehicles', async () => {
     const vehicleList: VehicleInterface[] = [
@@ -30,10 +29,10 @@ describe('GetVehiclesUseCase', () => {
         url: 'url',
         pictures: ['pictures']
       }
-    ]
+    ];
     const vehiclesApi = new VehiclesApi(Promise.resolve(vehicleList));
     await new GetVehiclesUseCase(vehiclesApi).execute();
     const vehiclesStore = useVehiclesStore();
     expect(vehiclesStore.vehicleList).toEqual(vehicleList);
-  })
-})
+  });
+});

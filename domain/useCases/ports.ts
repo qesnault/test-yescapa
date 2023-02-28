@@ -1,4 +1,4 @@
-import {VehicleInterface} from "~/domain/entites/vehicle.interface";
+import { VehicleInterface } from '~/domain/entites/vehicle.interface';
 
 interface VehicleStorageService {
     setVehicleList(vehicleList: VehicleInterface[]): void;
