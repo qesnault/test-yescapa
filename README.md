@@ -1,5 +1,7 @@
 # Yescapa Challenge
 
+Poc of Nuxt.js and Clean Architecture
+
 Application that browses vehicles, displays them in a list and displays a detailed view.
 
 ## Nuxt 3
